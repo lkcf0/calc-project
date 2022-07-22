@@ -1,0 +1,63 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0; /* removes all padding and margin */
+    margin: 0;
+    background: rgb(64, 70, 64)
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh; /* fills 100% of the screen always */
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(123px, auto) repeat(5, 100px);
+    border-radius: 25px;
+
+}
+
+.calculator-grid > button {    /*selects the button within calcgrid container*/
+    cursor: pointer; /*makes mouse make a hover pointer when over button*/
+    font-size: 2rem; /*rem measures the font size of root(16px)*/
+    border: 1px solid lightslategrey;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+
+}
+
+.calculator-grid > button:hover {  /*to control what hover does for selected element*/
+    background-color: rgba(255, 255, 255, .95);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output-screen {
+    grid-column: 1 / -1;
+    background-color: rgb(72, 97, 97);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output-screen .previous-num {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output-screen .current-num {
+    color: rgb(226, 237, 238);
+    font-size: 2.5rem;
+}
