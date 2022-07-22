@@ -38,7 +38,7 @@ body {
     grid-column: span 2;
 }
 
-.output-screen {
+.output {
     grid-column: 1 / -1;
     background-color: rgb(72, 97, 97);
     display: flex;
@@ -52,12 +52,12 @@ body {
     font-size: 1.5rem;
 }
 
-.output-screen .previous-num {
+.output .previous-num {
     color: rgba(255, 255, 255, .75);
     font-size: 1.5rem;
 }
 
-.output-screen .current-num {
+.output .current-num {
     color: rgb(226, 237, 238);
     font-size: 2.5rem;
 }
